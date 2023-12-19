@@ -1,0 +1,47 @@
+<h2>Liste des Actions</h2>
+
+<div>
+  <label>Filtrer par statut :</label>
+  <select [(ngModel)]="selectedStatus">
+    <option value="toutes">Toutes</option>
+    <option value="réussi">Réussies</option>
+    <option value="non réussi">Non Réussies</option>
+  </select>
+</div>
+
+<div>
+  <label>Recherche :</label>
+  <input type="text" [(ngModel)]="searchTerm" />
+</div>
+
+<ul>
+    <li *ngFor="let action of filteredActions; let i = index">
+        <div class="action-details">
+          <input
+            type="text"
+            [(ngModel)]="action.editingTitle"
+            *ngIf="action.editing"
+            (focusout)="stopEditing(action)"
+          />
+          <span *ngIf="!action.editing" (click)="startEditing(action)">{{ action.name }}</span>
+          - {{ action.objective }} - {{ action.responsible.name }} - {{ action.status }} - {{ action.createdAt | date:'medium' }}
+        </div>
+        <div class="action-buttons">
+          <button (click)="deleteAction(action)">Supprimer</button>
+          <button (click)="markAsSuccess(action)">Marquer comme réussi</button>
+        </div>
+      </li>
+  <li>
+    <input type="text" placeholder="Nom de l'action" [(ngModel)]="newAction.name" required>
+    <input type="text" placeholder="Objectif de l'action" [(ngModel)]="newAction.objective" required>
+    <input type="text" placeholder="Responsable de l'action" [(ngModel)]="newAction.responsible.name" required>
+    <input type="number" placeholder="Nombre de Bénéficiaires" [(ngModel)]="newAction.beneficiaries" required>
+    <button (click)="addAction()">Ajouter</button>
+  </li>
+</ul>
+
+
+
+
+
+

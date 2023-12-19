@@ -1,0 +1,43 @@
+/* Style pour le header */
+header {
+  background-color: #3498db;
+  padding: 20px;
+  color: #ffffff;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style pour la navigation */
+nav {
+  margin-top: 10px;
+}
+
+/* Style pour la liste de navigation */
+ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* Style pour chaque élément de la liste */
+li {
+  margin: 0 20px;
+}
+
+/* Style pour les liens de navigation */
+a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+/* Changement de couleur au survol */
+a:hover {
+  color: #ffcc00;
+}
+
+
+  

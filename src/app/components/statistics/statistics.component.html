@@ -1,0 +1,14 @@
+<!-- src/app/components/statistics/statistics.component.html -->
+
+<div class="statistics-container">
+    <h2>Statistiques des Actions</h2>
+    <div class="chart-container">
+      <div *ngFor="let data of statisticsData" class="bar">
+        <div class="bar-label">{{ data.label }}</div>
+        <div class="bar-value">{{ data.value }}</div>
+        <div class="bar-fill" [style.width]="calculateFillPercentage(data.value)"></div>
+
+      </div>
+    </div>
+  </div>
+  

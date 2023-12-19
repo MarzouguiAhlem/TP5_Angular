@@ -1,0 +1,45 @@
+/* src/app/components/statistics/statistics.component.css */
+
+.statistics-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  h2 {
+    color: #321c47; /* Violet */
+    margin-bottom: 20px;
+  }
+  
+  .chart-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .bar {
+    flex: 1;
+    margin: 0 10px;
+    background-color: #1d1c1c; /* Black */
+    color: #cec8c8; /* White */
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+  }
+  
+  .bar-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .bar-value {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+  }
+  
+  .bar-fill {
+    background-color: #173a5c; /* Dodger Blue */
+    height: 20px;
+    border-radius: 4px;
+  }
+  
+  
